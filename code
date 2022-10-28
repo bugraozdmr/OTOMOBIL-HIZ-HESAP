@@ -1,0 +1,52 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void hiz_olc(int x) {
+	if (x < 0) {
+		cout << "Gecersiz deger" << endl;
+	}
+}
+int main() {
+	int secim, hiz;
+	cout << "---TRAFIK HIZ TEST---\n" << endl;
+	cout << "AZAMI HIZ" << endl << "---------------\n" << "1.Otomobil : 82\n2.Otobus : 70\n3.Kamyonet : 50\n" << "---------------" << endl;
+	cout << "\n\nArac turu girin(sayilar) : "<<endl;
+	secim = _getch();			//conio.h kutuphanesi urunu
+	switch (secim)
+	{
+	case '1':
+		cout << "Hiz girini : ";
+		cin >> hiz;
+		if (hiz > 82) {
+			cout << "Otomobil cezali." << endl;
+		}
+		else {
+			hiz_olc(hiz);
+		}
+		break;
+	case '2':
+		cout << "Hiz girini : ";
+		cin >> hiz;
+		if (hiz > 70) {
+			cout << "Otobus cezali." << endl;
+		}
+		else {
+			hiz_olc(hiz);
+		}
+		break;
+		case '3':
+		cout << "Hiz girini : ";
+		cin >> hiz;
+		if (hiz > 50) {
+		cout << "Otobus cezali." << endl;
+		}
+		else {
+			hiz_olc(hiz);
+		}
+		break;
+	default:
+		cout << "hatali secim !" << endl;
+		break;
+	}
+}
+
