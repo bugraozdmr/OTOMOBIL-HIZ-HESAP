@@ -6,47 +6,69 @@ void hiz_olc(int x) {
 		cout << "Gecersiz deger" << endl;
 	}
 }
-int main() {
-	int secim, hiz;
+void olc() {
+	int secim;
 	cout << "---TRAFIK HIZ TEST---\n" << endl;
 	cout << "AZAMI HIZ" << endl << "---------------\n" << "1.Otomobil : 82\n2.Otobus : 70\n3.Kamyonet : 50\n" << "---------------" << endl;
-	cout << "\n\nArac turu girin(sayilar) : "<<endl;
+	cout << "\n\nArac turu girin(sayilar) : " << endl;
 	secim = _getch();			//conio.h kutuphanesi urunu
+	int hiz ;
 	switch (secim)
 	{
 	case '1':
-		cout << "Hiz girini : ";
+		cout << "Hiz giriniz : ";
 		cin >> hiz;
 		if (hiz > 82) {
 			cout << "Otomobil cezali." << endl;
 		}
+		else if ((hiz < 82) && (hiz > 0)) {
+			cout << "Otomobil cezasiz ." << endl;
+		}
 		else {
 			hiz_olc(hiz);
+			system("pause");
+			system("cls");
+			olc();
 		}
 		break;
 	case '2':
-		cout << "Hiz girini : ";
+		cout << "Hiz giriniz : ";
 		cin >> hiz;
 		if (hiz > 70) {
 			cout << "Otobus cezali." << endl;
 		}
+		else if ((hiz < 70) && (hiz > 0)) {
+			cout << "Otobus cezasiz ." << endl;
+		}
 		else {
 			hiz_olc(hiz);
+			system("pause");
+			system("cls");
+			olc();
 		}
 		break;
-		case '3':
-		cout << "Hiz girini : ";
+	case '3':
+		cout << "Hiz giriniz : ";
 		cin >> hiz;
 		if (hiz > 50) {
-		cout << "Otobus cezali." << endl;
+			cout << "Kamyonet cezali." << endl;
+		}
+		else if ((hiz < 50) && (hiz > 0)) {
+			cout << "Kamyonet cezasiz ." << endl;
 		}
 		else {
 			hiz_olc(hiz);
+			system("pause");
+			system("cls");
+			olc();
 		}
 		break;
 	default:
 		cout << "hatali secim !" << endl;
 		break;
 	}
+}
+int main() {
+	olc();
 }
 
